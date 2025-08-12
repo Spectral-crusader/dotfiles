@@ -1,0 +1,81 @@
+* {
+  font-family: "Iosevka";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 102%;
+  padding: 1px;
+}
+
+window#waybar {
+  background-color: #282828;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+window#waybar.empty {
+  background-color: #282828;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  border: 0px;
+  background-color: #282828;
+}
+
+tooltip {
+  opacity: 1;
+  border-radius: 0px; /* Removed rounded corners */
+}
+
+tooltip label {
+  padding: 10px;
+  color: #ebdbb2;
+}
+
+#custom-cava,
+#language
+#clock,
+#cpu,
+#memory,
+#mpris,
+#network,
+#pulseaudio,
+#temperature,
+#workspaces,
+#custom-menu,
+#custom-swaync {
+  border-radius: 0px; /* Removed rounded corners */
+  color: #ebdbb2;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#window {
+  color: #ebdbb2;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 0px; /* Removed rounded corners */
+}
+
+#workspaces button {
+  margin: 1px;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0px; /* Removed rounded corners */
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: #ebdbb2;
+  color: #282828;
+}
+
+#temperature.critical {
+  background-color: red;
+}
