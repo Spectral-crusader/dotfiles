@@ -58,7 +58,13 @@
     "max-length": 60,
     "separate-outputs": true,
     "offscreen-css": true,
-    "offscreen-css-text": "(inactive)"
+    "offscreen-css-text": "(inactive)",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": " $1",
+      "(.*) - fish": "> [$1]",
+      "(.*) - zsh": "> [$1]",
+      "(.*) - ghostty": "> [$1]"
+    }
   },
 
   "memory": {
