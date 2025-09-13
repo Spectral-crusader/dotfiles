@@ -58,13 +58,7 @@
     "max-length": 60,
     "separate-outputs": true,
     "offscreen-css": true,
-    "offscreen-css-text": "(inactive)",
-    "rewrite": {
-      "(.*) — Mozilla Firefox": " $1",
-      "(.*) - fish": "> [$1]",
-      "(.*) - zsh": "> [$1]",
-      "(.*) - kitty": "> [$1]"
-    }
+    "offscreen-css-text": "(inactive)"
   },
 
   "memory": {
@@ -163,10 +157,4 @@
       "Zen Browser"
     ]
   },
-
-  "custom/cava": {
-    "exec": "~/.config/dotfiles/hyprland/scripts/waybarCava.sh",
-    "format": "{}",
-    "on-click": "kitty -c ~/.config/dotfiles/kitty/kitty.conf nvim -c cd ~/.config/dotfiles/"
-  }
 }
