@@ -1,13 +1,13 @@
 @define-color bgc rgba(0, 0, 0, 0.1);
-@define-color borderc #ebdbb2;
-@define-color textc #282828;
+@define-color borderc #434C5E;
+@define-color textc #E5E9F0;
 
 * {
   font-family: Iosevka
   font-weight: bold;
   font-size: 15px;
   border-width: 3px;
-  border-color: #ebdbb2;
+  border-color: #434C5E;
 }
 
 .control-center .notification-row:focus,
@@ -23,22 +23,22 @@
 }
 
 .notification {
-  background: @textc;
+  background: @borderc;
   margin: 0px;
   border-radius: 0px; /* Removed rounded corners */
   border-width: 3px;
-  border-color: #ebdbb2;
+  border-color: #434C5E;
 }
 
 .notification-content {
-  background: @textc;
+  background: @borderc;
   padding: 7px;
   margin: 0;
 }
 
 .close-button {
-  background: @textc;
-  color: @borderc;
+  background: transparent;
+  color: @textc;
   text-shadow: none;
   padding: 0;
   border-radius: 0px; /* Removed rounded corners */
@@ -48,32 +48,29 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: @borderc;
-  color: @textc;
   transition: all 0.15s ease-in-out;
-  border: none;
 }
 
 .notification-action {
   color: @bgc;
-  background: @textc;
+  background: @borderc;
 }
 
 .summary {
   padding-top: 7px;
   font-size: 13px;
-  color: @borderc;
+  color: @textc;
 }
 
 .time {
   font-size: 11px;
-  color: @borderc;
+  color: @textc;
   margin-right: 40px;
 }
 
 .body {
   font-size: 12px;
-  color: @borderc;
+  color: @textc;
 }
 
 .control-center {
@@ -98,7 +95,7 @@
 }
 
 .widget-title {
-  color: @borderc;
+  color: @textc;
   padding: 10px 10px;
   margin: 10px 10px 5px 10px;
   font-size: 1.5rem;
@@ -106,7 +103,7 @@
 
 .widget-title>button {
   font-size: 1rem;
-  color: @borderc;
+  color: @textc;
   padding: 10px;
   text-shadow: none;
   background: @bgc;
@@ -129,7 +126,7 @@
 }
 
 .widget-mpris {
-  color: @borderc;
+  color: @textc;
   padding: 5px 5px 5px 5px;
   margin: 10px;
   border-radius: 0px; /* Removed rounded corners */

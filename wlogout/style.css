@@ -11,8 +11,8 @@ window {
 }
 
 button {
-  color: #ebdbb2;
-  background-color: #076678;
+  color: #D1D9E3;
+  background-color: #434C5E;
   border-style: solid;
   border-width: 3px;
   border-radius: 0px; /* Removed rounded corners */
@@ -24,11 +24,11 @@ button {
 
 button:active,
 button:hover {
-  background-color: #458388;
+  background-color: #546484;
 }
 
 button:focus {
-  background-color: #458488;
+  background-color: #546484;
 }
 
 #lock {

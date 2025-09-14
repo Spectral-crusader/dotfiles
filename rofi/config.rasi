@@ -13,4 +13,4 @@ configuration {
 }
 
 
-@theme "~/.config/dotfiles/rofi/gruvbox-material.rasi"
+@theme "~/.config/dotfiles/rofi/nord.rasi"
