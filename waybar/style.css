@@ -68,7 +68,7 @@
 #waybar {
     background: @bg;
     color: @light;
-    font-family: "Iosevka", "Font Awesome 7 Brands";
+    font-family: "Iosevka Nerd Font Propo", "Cantarell";
     font-size: 102%;
     font-weight: bold;
 }
@@ -87,13 +87,28 @@
 #custom-pacman,
 #custom-weather,
 #custom-gpu,
+#bluetooth,
+#idle_inhibitor,
 #tray,
 #custom-swaync,
 #backlight,
+#tags button,
 #language,
 #custom-cpugovernor {
     padding-left: 0.6em;
     padding-right: 0.6em;
+}
+
+#tags button {
+   font-weight: bold;
+}
+
+#tags button:hover {
+    background-color: @nord_bg;
+}
+
+#tags button.focused {
+    background-color: @nord_bg;
 }
 
 /* Each module that should blink */
@@ -153,7 +168,6 @@
 #workspaces button.active {
     color: #D8DEE9;
     opacity: 1;
-    padding-right: 0.4em;
 }
 
 #workspaces button.urgent {
@@ -171,35 +185,32 @@
     background: @nord_bg_blue;
     font-size: 1.2em;
     font-weight: bold;
-    padding: 0 0.6em;
 }
 #custom-gpu {
     background: @nord_bg;
     font-weight: bold;
-    padding: 0 0.6em;
+    /*padding: 0 0.6em;*/
 }
 #custom-weather {
     background: @mode;
     font-weight: bold;
-    padding: 0 0.6em;
+    /*padding: 0 0.6em;*/
 }
 #custom-pacman {
     background: @nord_light;
     color: @nord_dark_font;
     font-weight: bold;
-    padding: 0 0.6em;
+    /*padding: 0 0.6em;*/
 }
 #custom-scratchpad-indicator {
     background: @nord_light;
     color: @nord_dark_font;
     font-weight: bold;
-    padding: 0 0.6em;
+    /*padding: 0 0.6em;*/
 }
 #idle_inhibitor {
     background: @mode;
-    /*font-size: 1.6em;*/
     font-weight: bold;
-    padding: 0 0.6em;
 }
 #custom-alsa {
     background: @sound;
@@ -223,7 +234,6 @@
 #language {
     background: @nord_bg_blue;
     color: #D8DEE9;
-    padding: 0 0.4em;
 }
 #custom-cpugovernor {
     background-color: @nord_light;

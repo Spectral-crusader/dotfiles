@@ -1,12 +1,12 @@
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     // "height": 36, // Waybar height (to be removed for auto height)
     // Archived modules
     // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
     // Choose the order of the modules
-    "modules-left": [ "clock", "hyprland/language", "custom/pacman", "idle_inhibitor"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": [ "clock", "custom/pacman", "idle_inhibitor"],
+    "modules-center": ["river/tags"],
     "modules-right": [ "cpu", "temperature", "custom/gpu", "pulseaudio", "bluetooth", "network", "tray", "custom/swaync"],
     // Modules configuration
     "hyprland/workspaces": {
@@ -23,6 +23,9 @@
 	"3": [],
 	"4": [],
 	},
+    },
+    "river/tags": {
+	"num-tags": 4
     },
     "hyprland/window": {
         "format": "{}",
@@ -44,24 +47,25 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "",
+            "deactivated": ""
         },
-        "tooltip": "true"
+        "tooltip": "true",
+	"start-activated": true
     },
     "tray": {
         //"icon-size": 11,
         "spacing": 5
     },
     "clock": {
-        "format": "  {:%H:%M    %e %b}",
+        "format": " {:%H:%M  %e %b}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
     },
     "cpu": {
         "interval": "1",      
-        "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "on-click": "wezterm -e htop --sort-key PERCENT_CPU",
+        "format": " {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+        "on-click": "foot -e htop --sort-key PERCENT_CPU",
         "tooltip": false
     },
     "temperature": {
@@ -70,23 +74,23 @@
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
         "critical-threshold": 74,
         "format-critical": "  {temperatureC}°C",
-        "format": "{icon}  {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "network": {
         // "interface": "wlan0", // (Optional) To force the use of this interface,
-        "format-wifi": "  {essid}",
+        "format-wifi": " {essid}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "",
+        "format-disconnected": "󰌙",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "family": "ipv4",
-        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n {bandwidthUpBits}  {bandwidthDownBits}",
         "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n {bandwidthUpBits}  {bandwidthDownBits}"
     },
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
-        "format": "{icon}  {volume}% {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -127,16 +131,17 @@
     "escape": true
   },
     "custom/pacman": {
-        "format": "<big>󰚰</big>  {}",
+        "format": "<big>󰚰</big> {}",
         "interval": 3600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
+	"on-click": "foot -e paru -Syu",
         "signal": 8
     },
     "custom/gpu": {
       "exec": "$HOME/.config/waybar/custom_modules/custom-gpu.sh",
       "return-type": "json",
-      "format": "  {}",
+      "format": " {}",
       "interval": 2,
       "tooltip": "{tooltip}"
     }
