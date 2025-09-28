@@ -1,0 +1,3 @@
+timeout 300 'swaylock -f --image $HOME/Personal/wallpapers/26.png'
+timeout 600 'wlr-randr --output DP-1 --off' resume 'wlr-randr --output DP-1 --on'
+timeout 1800 'systemctl suspend'
