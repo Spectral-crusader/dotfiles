@@ -1,4 +1,10 @@
 export XCURSOR_SIZE=24
+export WAYLAND_DISPLAY=wayland-1
+export GBM_BACKEND=nvidia
 export LIBVA_DRIVER_NAME="nvidia"
 export __GLX_VENDOR_LIBRARY_NAME="nvidia"
-
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_QPA_PLATFORM=wayland
+export PATH=$PATH:$HOME/.local/bin
+export NVD_BACKEND=direct

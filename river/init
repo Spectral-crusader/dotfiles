@@ -187,7 +187,7 @@ riverctl rule-add -app-id 'lxqt-policykit-agent' float
 
 # Make all views with app-id "bar" and any title use client-side decorations
 riverctl rule-add -app-id "bar" csd
-riverctl rule-add tearing
+#riverctl rule-add tearing
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.

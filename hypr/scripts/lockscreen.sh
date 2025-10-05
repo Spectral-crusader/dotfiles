@@ -3,4 +3,4 @@
 #Script for lockscreen
 
 sleep 2
-hyprlock
+uwsm app -- hyprlock

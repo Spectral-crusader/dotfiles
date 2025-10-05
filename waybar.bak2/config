@@ -5,8 +5,8 @@
     // Archived modules
     // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
     // Choose the order of the modules
-    "modules-left": [ "clock", "hyprland/language", "custom/pacman", "idle_inhibitor"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": [ "clock", "custom/pacman", "idle_inhibitor"],
+    "modules-center": ["river/tags"],
     "modules-right": [ "cpu", "temperature", "custom/gpu", "pulseaudio", "bluetooth", "network", "tray", "custom/swaync"],
     // Modules configuration
     "hyprland/workspaces": {
@@ -23,6 +23,9 @@
 	"3": [],
 	"4": [],
 	},
+    },
+    "river/tags": {
+	"num-tags": 4
     },
     "hyprland/window": {
         "format": "{}",

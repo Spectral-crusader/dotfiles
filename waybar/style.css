@@ -92,23 +92,10 @@
 #tray,
 #custom-swaync,
 #backlight,
-#tags button,
 #language,
 #custom-cpugovernor {
     padding-left: 0.6em;
     padding-right: 0.6em;
-}
-
-#tags button {
-   font-weight: bold;
-}
-
-#tags button:hover {
-    background-color: @nord_bg;
-}
-
-#tags button.focused {
-    background-color: @nord_bg;
 }
 
 /* Each module that should blink */
