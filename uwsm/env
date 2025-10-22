@@ -1,5 +1,4 @@
 export XCURSOR_SIZE=24
-export WAYLAND_DISPLAY=wayland-1
 export GBM_BACKEND=nvidia
 export LIBVA_DRIVER_NAME="nvidia"
 export __GLX_VENDOR_LIBRARY_NAME="nvidia"
@@ -8,3 +7,5 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_QPA_PLATFORM=wayland
 export PATH=$PATH:$HOME/.local/bin
 export NVD_BACKEND=direct
+export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+export APP2UNIT_TYPE=service

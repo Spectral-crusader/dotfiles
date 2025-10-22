@@ -12,7 +12,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend & uwsm app -- hyprlock",
+    "action" : "systemctl suspend & app2unit hyprlock",
     "text" : "Suspend",
     "keybind" : "u"
 }
